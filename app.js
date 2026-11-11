@@ -5,9 +5,9 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const A='assets/', KEY='wetland-explorers-demo-v2';
 const topics=window.WETLAND_TOPICS, baseQuestions=window.WETLAND_QUESTIONS;
 const today=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Hong_Kong',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
-const fresh=()=>({version:2,moduleCodes:{},unlockedModules:{},course:'biodiversity',coins:240,pet:'crab',equipped:'hat',inventory:{hat:1,crown:0,food:3,recovery:2},stats:{crab:{health:92,hunger:68,stamina:84},spoonbill:{health:90,hunger:76,stamina:88}},submissions:{},rewards:[],activityDays:[],loginClaim:null,restDays:{},customQuestions:[],assets:[],scene:null,settings:{display:'standard',motion:true}});
+const fresh=()=>({version:2,modulePreset:1,moduleCodes:{},unlockedModules:{invertebrates:true,vertebrates:true},course:'biodiversity',coins:240,pet:'crab',equipped:'hat',inventory:{hat:1,crown:0,food:3,recovery:2},stats:{crab:{health:92,hunger:68,stamina:84},spoonbill:{health:90,hunger:76,stamina:88}},submissions:{},rewards:[],activityDays:[],loginClaim:null,restDays:{},customQuestions:[],assets:[],scene:null,settings:{display:'standard',motion:true}});
 let state=fresh(),storageEnabled=true,role='student',loggedOut=false;
-try {const stored=JSON.parse(localStorage.getItem(KEY)||'null');if(stored?.version===2)state={...fresh(),...stored};localStorage.setItem(KEY,JSON.stringify(state));}catch{storageEnabled=false;}
+try {const stored=JSON.parse(localStorage.getItem(KEY)||'null');if(stored?.version===2)state={...fresh(),...stored,...(stored.modulePreset===1?{}:{modulePreset:1,unlockedModules:{invertebrates:true,vertebrates:true}})};localStorage.setItem(KEY,JSON.stringify(state));}catch{storageEnabled=false;}
 function commit(fn){const old=JSON.stringify(state);fn(state);try{if(storageEnabled)localStorage.setItem(KEY,JSON.stringify(state));return true;}catch{state=JSON.parse(old);toast('Browser storage is full. Remove an uploaded asset and try again.');return false;}}
 let toastTimer;
 function toast(message){$('#toast').textContent=message;$('#toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),3800);}
