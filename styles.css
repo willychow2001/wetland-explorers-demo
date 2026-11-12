@@ -6,3 +6,6 @@
 
 /* Wetland Park map and independent interactive activity markers. */
 .map{aspect-ratio:1399/1124}.map .node-label{box-shadow:0 2px 8px #29493833}.map .node-disc{box-shadow:0 2px 9px #29493866}.legend .map-note{font-size:.65rem}@media(max-width:600px){.legend .map-note{font-size:.6rem}}
+
+/* Each course keeps the coordinate system of its own map artwork. */
+.map.plant-map{aspect-ratio:760/570}.map.wetland-map{aspect-ratio:1399/1124}
