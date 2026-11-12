@@ -1,9 +1,9 @@
 /* Demonstration questions, authored for this prototype; not an approved course assessment. */
 window.WETLAND_TOPICS=[
- {id:'invertebrates',name:'Invertebrates',eyebrow:'Small animals, big connections',description:'Investigate how wetland invertebrates feed, move and interact with their habitat.',color:'#c88851',point:[290,420]},
- {id:'vertebrates',name:'Vertebrates',eyebrow:'Adapted to wetland life',description:'Connect the structures and behaviour of birds and fish with their environment.',color:'#669ca7',point:[205,316]},
- {id:'plants',name:'Plants',eyebrow:'Rooted in the wetland',description:'Explore how plant structures support survival and influence a wetland ecosystem.',color:'#7b9b5c',point:[310,157]},
- {id:'ecosystem',name:'Ecosystem',eyebrow:'See the bigger picture',description:'Use ecological evidence to consider environmental change and conservation decisions.',color:'#9a83a4',point:[475,104]}
+ {id:'invertebrates',name:'Invertebrates',eyebrow:'Small animals, big connections',description:'Investigate how wetland invertebrates feed, move and interact with their habitat.',color:'#c88851',point:[472,538]},
+ {id:'vertebrates',name:'Vertebrates',eyebrow:'Adapted to wetland life',description:'Connect the structures and behaviour of birds and fish with their environment.',color:'#669ca7',point:[439,405]},
+ {id:'plants',name:'Plants',eyebrow:'Rooted in the wetland',description:'Explore how plant structures support survival and influence a wetland ecosystem.',color:'#7b9b5c',point:[464,266]},
+ {id:'ecosystem',name:'Ecosystem',eyebrow:'See the bigger picture',description:'Use ecological evidence to consider environmental change and conservation decisions.',color:'#9a83a4',point:[822,193]}
 ];
 window.WETLAND_QUESTIONS=[
  {id:'inv-in-mc',topic:'invertebrates',mode:'in-class',type:'mc',prompt:'Which observation most directly links a fiddler crab to a change in its physical habitat?',options:['Its shell has an orange-red colour.','Its burrowing moves sediment and changes local sediment conditions.','It belongs to the animal kingdom.','Its enlarged claw is visually striking.'],correct:1,feedback:'Burrowing connects an animal’s behaviour with sediment processes. The ecological link is the process and its consequence, rather than appearance alone.'},
